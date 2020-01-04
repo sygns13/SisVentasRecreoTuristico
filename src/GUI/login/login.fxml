@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gui.LoginController">
+
+<!--
+<AnchorPane id="AnchorPane" prefHeight="504.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller" >-->
+   <children>
+      <BorderPane prefHeight="504.0" prefWidth="835.0" style="-fx-background-color: #fff;">
+         <left>
+            <Pane prefHeight="504.0" prefWidth="343.0" styleClass="linear-grad" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="15.0" prefWidth="65.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="85.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="101.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="21.0" layoutY="245.0" text="Sistema de Gestión de Ventas&#10;Control de Pedidos y&#10;Facturación Eectrónica" textAlignment="CENTER" textFill="#ebebeb">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="370.0" text="El Huerto de Lázaro" textFill="WHITE">
+                     <font>
+                        <Font name="Bank Gothic Light BT" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="401.0" text="Recreo Turístico" textFill="WHITE">
+                     <font>
+                        <Font name="Bank Gothic Light BT" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="504.0" prefWidth="493.0" style="-fx-background-color: #fff;" />
+                  <Pane prefHeight="202.0" prefWidth="385.0">
+                     <children>
+                        <PasswordField layoutX="115.0" layoutY="224.0" onAction="#handletxtPassword" prefHeight="35.0" prefWidth="262.0" promptText="Password" />
+                        <Button fx:id="btnAcceder" layoutX="40.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleBtnAcceder" prefHeight="46.0" prefWidth="190.0" styleClass="button1" stylesheets="@stylesheet.css" text="Iniciar Sesión" />
+                        <Button fx:id="btnCancelar" layoutX="262.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleBtnSalir" prefHeight="46.0" prefWidth="190.0" styleClass="button1" stylesheets="@stylesheet.css" text="Salir" />
+                        <Label fx:id="lblAcceso" layoutX="171.0" layoutY="102.0" text="Acceso al Sistema">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <TextField layoutX="115.0" layoutY="163.0" onAction="#handletxtUsuario" prefHeight="35.0" prefWidth="262.0" promptText="Usuario" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </center>
+         <top>
+            <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+        <!--
+        </AnchorPane>
+                -->
+</GridPane>
