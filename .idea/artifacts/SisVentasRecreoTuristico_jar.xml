@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SisVentasRecreoTuristico:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SisVentasRecreoTuristico_jar</output-path>
+    <root id="archive" name="SisVentasRecreoTuristico.jar">
+      <element id="module-output" name="SisVentasRecreoTuristico" />
+    </root>
+  </artifact>
+</component>
