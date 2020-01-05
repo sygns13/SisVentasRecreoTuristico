@@ -19,8 +19,7 @@ public class Almacen {
     public Almacen() {
     }
 
-    public Almacen(Long id, String nombre, String direccion, Long empresa_id, Long user_id, int activo, int borrado, Date created_at, Date updated_at, Empresa empresa, User user) {
-        this.id = id;
+    public Almacen(String nombre, String direccion, Long empresa_id, Long user_id, int activo, int borrado, Date created_at, Date updated_at) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.empresa_id = empresa_id;
@@ -29,8 +28,6 @@ public class Almacen {
         this.borrado = borrado;
         this.created_at = created_at;
         this.updated_at = updated_at;
-        this.empresa = empresa;
-        this.user = user;
     }
 
     public Long getId() {
