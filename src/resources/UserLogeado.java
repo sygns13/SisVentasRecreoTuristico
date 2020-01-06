@@ -1,8 +1,9 @@
-package modelIfz.beans;
+package resources;
 
 import java.util.Date;
 
-public class User {
+public class UserLogeado {
+
     private Long id;
     private String name;
     private String email;
@@ -18,29 +19,15 @@ public class User {
     private Long tipo_user_id;
     private String clave;
 
-    private Empresa empresa;
-    private User user;
+    private UserLogeado(){}
 
-    public User() {
+    public static UserLogeado getInstance(){
+        return UserLogeadoHolder.INSTANCE;
     }
 
-    public User(Long id, String name, String email, String password, String remember_token, Long user_id, Long empresa_id, int activo, int borrado, Date created_at, Date updated_at, String verification_token, Long tipo_user_id, String clave, Empresa empresa, User user) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.remember_token = remember_token;
-        this.user_id = user_id;
-        this.empresa_id = empresa_id;
-        this.activo = activo;
-        this.borrado = borrado;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
-        this.verification_token = verification_token;
-        this.tipo_user_id = tipo_user_id;
-        this.clave = clave;
-        this.empresa = empresa;
-        this.user = user;
+    private static class UserLogeadoHolder {
+
+        private static final UserLogeado INSTANCE = new UserLogeado();
     }
 
     public Long getId() {
@@ -145,22 +132,6 @@ public class User {
 
     public void setTipo_user_id(Long tipo_user_id) {
         this.tipo_user_id = tipo_user_id;
-    }
-
-    public Empresa getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public String getClave() {

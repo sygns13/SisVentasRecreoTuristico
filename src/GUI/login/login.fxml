@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gui.LoginController">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gui.LoginController">
 
 <!--
 <AnchorPane id="AnchorPane" prefHeight="504.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller" >-->
@@ -61,14 +61,14 @@
                   <Pane prefHeight="504.0" prefWidth="493.0" style="-fx-background-color: #fff;" />
                   <Pane prefHeight="202.0" prefWidth="385.0">
                      <children>
-                        <PasswordField layoutX="115.0" layoutY="224.0" onAction="#handletxtPassword" prefHeight="35.0" prefWidth="262.0" promptText="Password" />
-                        <Button fx:id="btnAcceder" layoutX="40.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleBtnAcceder" prefHeight="46.0" prefWidth="190.0" styleClass="button1" stylesheets="@stylesheet.css" text="Iniciar Sesión" />
-                        <Button fx:id="btnCancelar" layoutX="262.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleBtnSalir" prefHeight="46.0" prefWidth="190.0" styleClass="button1" stylesheets="@stylesheet.css" text="Salir" />
+                        <PasswordField fx:id="txtPassword" layoutX="115.0" layoutY="224.0" onKeyPressed="#handletxtPassword" prefHeight="35.0" prefWidth="262.0" promptText="Password" />
+                        <Button fx:id="btnAcceder" layoutX="40.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleBtnAcceder" onKeyPressed="#handleBtnAccederEnter" prefHeight="46.0" prefWidth="190.0" styleClass="button1" stylesheets="@stylesheet.css" text="Iniciar Sesión" />
+                        <Button fx:id="btnCancelar" layoutX="262.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleBtnSalir" onKeyPressed="#handleBtnSalirEnter" prefHeight="46.0" prefWidth="190.0" styleClass="button1" stylesheets="@stylesheet.css" text="Salir" />
                         <Label fx:id="lblAcceso" layoutX="171.0" layoutY="102.0" text="Acceso al Sistema">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font></Label>
-                        <TextField layoutX="115.0" layoutY="163.0" onAction="#handletxtUsuario" prefHeight="35.0" prefWidth="262.0" promptText="Usuario" />
+                        <TextField fx:id="txtUsuario" layoutX="115.0" layoutY="163.0" onKeyPressed="#handletxtUsuario" prefHeight="35.0" prefWidth="262.0" promptText="Usuario" />
                      </children>
                   </Pane>
                </children>
